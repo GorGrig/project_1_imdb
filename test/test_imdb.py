@@ -8,7 +8,7 @@ import pytest
 
 @pytest.mark.usefixtures("setup_teardown_driver_firefox")
 class TestIMDBHomePage:
-  
+   
    def test_sign_in_positive(self):
       homepage = HomePage(self.driver)
       text = homepage.sign_in_positive(valid_email="bamilob426@storypo.com", valid_password="hxdygc57541j")
@@ -54,4 +54,3 @@ class TestIMDBHomePage:
       homepage = HomePage(self.driver)
       txt = homepage.social_natworks_links_check(button_social_network_xpath)
       assert txt in social_network_home_page_link
-      
