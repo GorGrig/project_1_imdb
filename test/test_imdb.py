@@ -8,25 +8,22 @@ import pytest
 
 @pytest.mark.usefixtures("setup_teardown_driver_firefox")
 class TestIMDBHomePage:
-   
+     
    def test_sign_in_positive(self):
       homepage = HomePage(self.driver)
-      username = homepage.sign_in_positive()
-      assert username != "Sign In"   
-   
-   @pytest.mark.parametrize('email, password', [
-      ("bdhftdy@fly.net", "hHC63MZBeJenLp9"),
-      #("tixava8831@lenfly.com", "drDRwdd3658kKL5"),
-      #("bdhftdy@fly.net", "drDRwdd3658kKL5")
-      ])  
-   def test_sign_in_negative(self, email, password):
+      text = homepage.sign_in_positive(valid_email="bamilob426@storypo.com", valid_password="hxdygc57541j")
+      assert text == "Sign out", 'The test failed because the site identified you as a bot.\nPlease enter another valid email and password'
+    
+   @pytest.mark.parametrize('email, password, excpected_result', [
+      ("armanatanesyan@mail.com", "armantjy584", "We cannot find an account with that email address"),
+      ("tixava8831@lenfly.com", "drjnhkKL5", "Your password is incorrect"),
+      ("harutgasparyan@mail.ru", "dvrmgfcr658kKL5", "We cannot find an account with that email address")
+      ])
+   def test_sign_in_negative(self, email, password, excpected_result):
       homepage = HomePage(self.driver)
       result = homepage.sign_in_negative(email=email, password=password)
-      text = "We cannot find an account with that email address Your password is incorrect"
-      #assert result in text
-   # To better protect your account, please re-enter your password and then enter the characters as they are shown in the image below.
-   
-   '''
+      assert result == excpected_result, 'The test failed because the site identified you as a bot.\nPlease enter another invalid email or password'
+    
    @pytest.mark.parametrize('name_move, excpected_result', [
       ("The Terminator", 'Results for "The Terminator"'),
       ("tryexcpect", 'No results found for "tryexcpect"')
@@ -35,17 +32,18 @@ class TestIMDBHomePage:
       homepage = HomePage(self.driver)
       text = homepage.search_field_check(name_move)
       assert text == excpected_result
-      
+     
    def test_menu_button(self):
       homepage = HomePage(self.driver)
       txt = homepage.menu_button_test()
       assert "Movies" == txt
-      
+    
    def test_change_language(self):
       homepage = HomePage(self.driver)
       txt = homepage.language_change()
       assert txt == "Suivante"
-         
+   
+   
    @pytest.mark.parametrize('button_social_network_xpath, social_network_home_page_link', [
       ('//*[@id="iconContext-facebook"]', 'https://www.facebook.com/imdb'),
       ('//*[@id="iconContext-instagram"]', 'https://www.instagram.com/imdb/'),
@@ -58,4 +56,3 @@ class TestIMDBHomePage:
       txt = homepage.social_natworks_links_check(button_social_network_xpath)
       assert txt == social_network_home_page_link
       
-   '''

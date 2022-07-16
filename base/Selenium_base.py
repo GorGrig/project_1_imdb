@@ -11,8 +11,7 @@ class SeleniumBase:
     def __init__(self, driver) -> None:
         self.driver = driver
         self.wait = WebDriverWait(driver, 45, 0.3)
-    
-        
+            
     def __selenium_find_by(self, find_by):
         find_by = find_by.lower()
         locating = {'css' : By.CSS_SELECTOR, 'xpath' : By.XPATH, 

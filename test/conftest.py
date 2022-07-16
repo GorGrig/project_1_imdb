@@ -5,7 +5,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as options_firefox
 from base.constans import VariabeleAndConst
-from fake_useragent import UserAgent
 
 
 @pytest.fixture
@@ -18,7 +17,7 @@ def create_options_firefox():
 def create_webdriver_firefox(create_options_firefox):
     option = create_options_firefox
     driver = webdriver.Firefox(options=option,
-        executable_path='/home/hrayr/imdb_site_test_case/Firefox_driver/geckodriver')
+        executable_path=VariabeleAndConst.FIREFOX_GECKODRIVER_PATH)
     return driver
 
 @pytest.fixture(scope='function')
