@@ -11,6 +11,7 @@ class SeleniumBase:
     def __init__(self, driver) -> None:
         self.driver = driver
         self.wait = WebDriverWait(driver, 45, 0.3)
+    
         
     def __selenium_find_by(self, find_by):
         find_by = find_by.lower()
@@ -26,7 +27,7 @@ class SeleniumBase:
     def is_visible_element_click(self, find_by : str, locator : str) -> None:
         self.is_visible_element(find_by, locator).click()
         
-    def send_text_to_field(self, find_by : str, locator : str, text : str) -> WebElement:
+    def send_text_to_field(self, find_by : str, locator : str, text : str) -> None:
         element_1 = self.is_visible_element(find_by, locator)
         element_1.clear()
         element_1.send_keys(text)
@@ -41,6 +42,10 @@ class SeleniumBase:
     def switching_between_tabs(self, index_page) -> None:
         driver = self.driver
         driver.switch_to.window(driver.window_handles[index_page])
+        
+    def cookies_delete_all(self) -> None:
+        driver = self.driver
+        driver.delete_all_cookies()
         
     def wait_time(self, wait_second) -> None:
         time.sleep(wait_second)

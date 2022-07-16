@@ -5,7 +5,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as options_firefox
 from base.constans import VariabeleAndConst
-
+from fake_useragent import UserAgent
 
 
 @pytest.fixture
