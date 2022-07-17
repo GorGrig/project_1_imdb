@@ -7,5 +7,12 @@ The version of the program that was used<br/>
 
 
 **launching the program**<br/>
-git clone https://github.com/GorGrig/project_1_imdb<br/>
+  --download repository<br/>
+1.git clone https://github.com/GorGrig/project_1_imdb<br/>
+  --go to folder<br/>
+2.cd project_1_imdb<br/>
+  --append project root directory<br/>
+3.export PYTHONPATH=/path/to/project_1_imdb<br/>
+  --run tests<br/>
+4.pytest -s -v<br/>
 
