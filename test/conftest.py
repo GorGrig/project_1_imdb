@@ -1,10 +1,7 @@
-import sys
-sys.path.append('/home/hrayr/imdb_site_test_case/')
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as options_firefox
-from base.constans import VariabeleAndConst
+from Base.constant import VariabeleAndConst
 
 
 @pytest.fixture

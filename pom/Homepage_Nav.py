@@ -1,7 +1,4 @@
-import sys
-sys.path.append('/home/hrayr/imdb_site_test_case/')
-from base.Selenium_base import SeleniumBase
-
+from Base.SeleniumBase import SeleniumBase
 
 
 

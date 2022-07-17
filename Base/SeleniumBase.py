@@ -52,5 +52,3 @@ class SeleniumBase:
     def get_current_url(self) -> str:
         driver = self.driver
         return driver.current_url
-    
-    

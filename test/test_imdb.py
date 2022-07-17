@@ -1,9 +1,5 @@
-import sys
-sys.path.append('/home/hrayr/imdb_site_test_case/')
-
 from pom.Homepage_Nav import HomePage
 import pytest
-
 
 
 @pytest.mark.usefixtures("setup_teardown_driver_firefox")
