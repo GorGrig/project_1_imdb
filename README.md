@@ -7,6 +7,7 @@ The version of the program that was used<br/>
 
 
 **launching the program**<br/>
+  --for linux ubuntu(18.04LTS)<br/>
   --download repository<br/>
 1.git clone https://github.com/GorGrig/project_1_imdb<br/>
   --go to folder<br/>
