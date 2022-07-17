@@ -1,5 +1,5 @@
 # project_1_imdb
-Make sure you have python, pytest, selenium installed<br/>
+Make sure you have python, pytest, selenium, firefox, installed<br/>
 The version of the program that was used<br/>
 --pyhton3.6.9<br/>
 --pytest7.0.1<br/>
