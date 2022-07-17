@@ -6549,6 +6549,7 @@ console.error: "Error during quit-application-granted: [Exception... \"File erro
 Read port: 44923
 Read port: 44923
 1657997880859	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+<<<<<<< HEAD
 1658001231555	geckodriver	INFO	Listening on 127.0.0.1:43621
 1658001232577	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileSuSKEB"
 1658001242310	Marionette	INFO	Marionette enabled
@@ -7110,3 +7111,23 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+=======
+1658002251752	geckodriver	INFO	Listening on 127.0.0.1:49121
+1658002252659	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofile7IoMXb"
+1658002288143	Marionette	INFO	Marionette enabled
+1658002288178	Marionette	INFO	Listening on port 38445
+Read port: 38445
+Read port: 38445
+Read port: 38445
+Read port: 38445
+1658002292537	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 767))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7IoMXb/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+1658002361535	Marionette	INFO	Stopped listening on port 38445
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+>>>>>>> 659b1b34f43b12dc416ca5bb0c51df15a785f77f

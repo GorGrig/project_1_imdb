@@ -62,5 +62,5 @@ class HomePage(SeleniumBase):
         self.scoll()
         self.is_visible_element_click("xpath", button_social_network_xpath)
         self.switching_between_tabs(1)
-        self.wait_time(5)
+        self.wait_time(7)
         return self.get_current_url()
